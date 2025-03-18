@@ -910,39 +910,64 @@ body {
 
   .formulario {
     order: -1;
-    /* Move o formulário para cima */
     width: 80%;
+    /* Ajusta a largura para 90% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza os itens dentro do formulário */
+    justify-content: center;
+    margin: 0 auto;
+    /* Garante que o formulário fique centralizado na página */
+  }
+
+  .botão {
+    width: 90% !important;
+    /* Ajusta o botão para ocupar toda a largura disponível */
   }
 
   .info {
-    width: 100%;
+    width: 90%;
+    text-align: center;
+    /* Centraliza o texto dentro da div info */
+    padding: 10px;
   }
 
   .formulario form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    /* Espaçamento entre os campos */
+    gap: 15px;
+    /* Aumenta o espaço entre os campos */
+    width: 90%;
+    /* Garante que o formulário ocupe toda a largura */
+    align-items: center;
+    /* Centraliza os campos dentro do formulário */
   }
 
   .formulario input,
   .formulario textarea,
   .formulario button {
     width: 80%;
-    padding: 8px;
-    font-size: 0.9rem;
+    /* Faz os campos ocuparem toda a largura disponível */
+    max-width: 400px;
+    /* Limita o tamanho máximo dos campos */
+    padding: 5px;
+    font-size: 1rem;
+    margin: 0 auto;
+    /* Centraliza os campos */
   }
 
   .info p {
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
+
 }
 
-@media (max-width: 425px) {
+@media (max-width: 425px) and (min-width: 321px) {
 
   .a-menu {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     margin: 0;
     /* Remove margens desnecessárias */
     text-decoration: none;
@@ -1036,8 +1061,8 @@ body {
   }
 
   .navbar a {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .navbar a span {
@@ -1131,76 +1156,302 @@ body {
 
   .formulario {
     order: -1;
-    /* Move o formulário para cima */
-    width: 80%;
+    width: 90%;
+    /* Ajustado para não ficar muito largo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza os itens dentro do formulário */
+    justify-content: center;
+    margin: 0 auto;
+    /* Garante que o formulário fique centralizado */
+  }
+
+  .botão {
+    width: 88% !important;
+    /* Ajusta para ocupar toda a largura do formulário */
   }
 
   .info {
     width: 100%;
+    text-align: center;
+    /* Centraliza o texto dentro da info */
+    padding: 10px;
   }
 
   .formulario form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    /* Espaçamento entre os campos */
+    gap: 15px;
+    /* Aumenta o espaçamento entre os campos */
+    width: 100%;
+    /* Garante que o formulário ocupe toda a largura disponível */
+    align-items: center;
+    /* Centraliza os campos dentro do formulário */
   }
 
   .formulario input,
   .formulario textarea,
   .formulario button {
     width: 80%;
-    padding: 8px;
-    font-size: 0.9rem;
+    /* Ocupará toda a largura disponível */
+    max-width: 400px;
+    /* Limita o tamanho máximo dos campos */
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 auto;
+    /* Centraliza os campos */
   }
 
   .info p {
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
 
 /* Estilos para telas entre 426px e 768px (Tablets) */
-@media (min-width: 426px) and (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 426px) {
   .a-menu {
-    font-size: 0.7rem;
-    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 0;
+    /* Remove margens desnecessárias */
+    text-decoration: none;
+    color: #333;
+    padding: 8px 22px;
+    transition: all 0.3s ease;
+    align-items: center;
+
   }
 
   .logo {
-    width: 25%;
+    width: 20%;
+    padding: 0% 0% 0% -20%;
+    margin: 0%;
   }
 
-  p.bannerin,
+  p.bannerin {
+    font-size: 1rem;
+    padding: 0% 25% 0% 25%;
+    align-items: center;
+    text-align: center;
+
+  }
+
   p.bannerin1 {
-    font-size: 1.2rem;
-    padding: 0 15%;
+    font-size: 1rem;
+    padding: 0% 20% 0% 20%;
+    align-items: center;
+
   }
 
-  .imgprinc,
-  .card,
-  .cardimg {
-    width: 60%;
+  .imgprinc {
+    align-items: center;
+    width: 50%;
   }
 
-  h1.h1text,
+  h1.h1text {
+    font-size: 1rem;
+    align-items: center;
+  }
+
   p.principal {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    padding: 0%;
+    margin: 0%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .img1 {
+    visibility: hidden;
+  }
+
+  .tituloprincipal2,
+  .bannerin,
+  .cardimg,
+  .cardtext,
+  .h1text,
+  .principal,
+  .meublog,
+  .blo,
+  .baixoclass,
+  .servicos,
+  .centro,
+  .image-section2 {
+    visibility: visible;
+  }
+
+  .tituloprincipal2 {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    padding: 0% 20% 0% 20% !important;
+
+  }
+
+  .bannerin {
+    font-size: 0.8rem !important;
+    padding: 0 5% !important;
+  }
+
+  .oi {
+    max-width: 95% !important;
+    text-align: center !important;
   }
 
   .navbar ul {
+    padding: 0.8rem;
+    position: relative;
     left: -50px;
+    top: 50%;
+
+  }
+
+  .navbar a {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .navbar a span {
+    font-size: 1rem;
+  }
+
+  h2.cardh {
+    font-size: 0.8rem !important;
+  }
+
+  p.cardtext {
+    font-size: 0.8rem !important;
+    padding: 0% 0% 5% 0%;
   }
 
   .card {
-    width: 60%;
-    padding: 6% 6% 0 6%;
+    width: 50%;
+    padding: 5% 3% 5% 3%;
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    text-align: center;
+  }
+
+  .cardimg {
+    width: 70% !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain;
   }
 
   .cta-button {
-    width: 60%;
+    width: 50%;
+    /* Mais largo em telas pequenas */
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0% 13% 0% 13%;
+  }
+
+  .image-section2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgblog {
+    width: 100%;
+    /* Ocupa toda a largura */
+    height: auto;
+    /* Mantém a proporção */
+    margin-bottom: 15px;
+    /* Espaço entre imagem e texto */
+  }
+
+  .text-section2 {
+    width: 100%;
+    padding: 0 10px;
+    /* Espaçamento interno para evitar bordas coladas */
+  }
+
+  .text-section2 h1 {
+    font-size: 1.2rem;
+    /* Ajusta tamanho do título */
+    margin-bottom: 10px;
+  }
+
+  .text-section2 p {
+    font-size: 0.9rem;
+    /* Ajusta tamanho do texto */
+    line-height: 1.4;
+    /* Melhora espaçamento */
+    width: 90%;
+  }
+
+  .meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 13%;
+  }
+
+  .formulario {
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza os itens dentro do formulário */
+    justify-content: center;
+  }
+
+  .formulario form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Mais espaçamento entre os campos */
+    align-items: center;
+    /* Centraliza os campos dentro do form */
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .formulario button {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    max-width: 400px;
+    /* Limita o tamanho máximo dos campos */
+    padding: 10px;
     font-size: 1rem;
+    margin: 0 auto;
+    /* Centraliza os campos dentro do formulário */
+  }
+
+  .botão {
+    width: 100% !important;
+  }
+
+  .info {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
+
+
 
 /* Estilos para telas entre 769px e 1024px (Laptops) */

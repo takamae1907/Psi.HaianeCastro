@@ -472,6 +472,19 @@ p {
 
   }
 
+  .menu {
+    flex-direction: column;
+    /* Empilha os itens em telas menores */
+    gap: 10px;
+  }
+
+  .a-menu {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    text-align: center;
+  }
+
+
   .a-menu:hover {
     color: #007bff;
   }
@@ -561,6 +574,18 @@ p {
     white-space: nowrap;
     overflow: hidden;
     max-width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    /* Empilha os itens em telas menores */
+    gap: 10px;
+  }
+
+  .a-menu {
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    text-align: center;
   }
 
 
@@ -784,80 +809,6 @@ p {
   .navbar a {
     width: 2rem;
     height: 2rem;
-  }
-
-  .navbar a span {
-    font-size: 0.8rem;
-  }
-
-}
-
-@media (min-width: 769px) {
-  .tema {
-    font-size: 1.2rem;
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-    padding: 0% 10%;
-  }
-
-  h2,
-  h3 {
-    font-size: 1.2rem;
-    padding: 0% 10%;
-  }
-
-  .card {
-    max-width: 60%;
-  }
-
-  .menu {
-    padding: 2%;
-    gap: 20px;
-  }
-
-  .a-menu {
-    font-size: 0.9rem;
-  }
-
-  .formulario {
-    padding: 5%;
-  }
-
-  .formulario input,
-  .formulario textarea {
-    font-size: 1.1rem;
-  }
-
-  .formulario button {
-    font-size: 1.1rem;
-  }
-
-  .accordion-header {
-    font-size: 1.2rem;
-  }
-
-  .accordion-body {
-    font-size: 1rem;
-  }
-
-  .navbar ul {
-    padding: 0.5rem;
-    position: relative;
-    left: -70px;
-    top: 50%;
-
-  }
-
-  .navbar a {
-    width: 1rem;
-    height: 1rem;
   }
 
   .navbar a span {
