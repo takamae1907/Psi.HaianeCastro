@@ -740,7 +740,7 @@ body {
 
   p.bannerin {
     font-size: 1rem;
-    padding: 0% 25% 0% 25%;
+    padding: 0% 20% 0% 20%;
     align-items: center;
 
   }
@@ -961,7 +961,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
   }
-
+ 
 }
 
 @media (max-width: 425px) and (min-width: 321px) {
@@ -1044,7 +1044,7 @@ body {
 
   .bannerin {
     font-size: 0.8rem !important;
-    padding: 0 5% !important;
+    padding: 0 20% !important;
   }
 
   .oi {
@@ -1290,7 +1290,7 @@ body {
 
   .bannerin {
     font-size: 0.8rem !important;
-    padding: 0 5% !important;
+    padding: 0 10%  !important;
   }
 
   .oi {
