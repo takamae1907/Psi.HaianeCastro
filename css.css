@@ -242,8 +242,38 @@ article.content {
   padding: 3% 18% 3% 18%;
   margin: 0%;
 
+}
+
+.card1 {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.imagem3 {
+  flex: 1;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
+
+.texto {
+  flex: 2;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.h1text {
+  margin-top: 0;
+  font-size: 2rem;
 }
 
 .principal {
@@ -274,19 +304,20 @@ article.content {
 
 .imagem {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
 }
 
 .img1 {
   width: 100%;
-  max-width: 350px;
-  margin: 0%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  /* remove arredondamento se for ocupar tudo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  padding: 0%;
-  margin: 0%;
 }
 
 .img1:hover {
@@ -331,71 +362,92 @@ article.content {
 }
 
 /* separação */
+
+
+
+/* separação */
 .servicos {
   text-align: center;
-  background-color: #f9fcff;
+  background-color: #f9fcff2d; 
   color: #000;
-  padding: 0% 0% 3% 0%;
+  padding: 3% 0% 0% 0%;
   transition: 3s;
   align-items: center;
   flex: auto;
-}
-
-.servicos h2 {
   font-size: 3rem;
-  padding: 0% 0% 2% 0%;
+  padding: 3% 0% 0% 0%;
   margin-bottom: 20px;
+  background-color: #f9fcff; 
   font-family: "Quicksand", sans-serif;
   margin: 0%;
-
 }
 
-.cards-container {
+
+.cardsmeio {
   display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  padding: 5% 20% 5% 20% ;         /* mantém o padding */
+  background-color: #f9fcff;           
+  box-sizing: border-box;  /* para padding não alterar o tamanho total */
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* permite quebra de linha se necessário */
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .card {
-  background-color: #e7f1ff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 367px;
-  height: 518px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  border-left: 6px solid #6C63FF;
   text-align: center;
-  transition: 2.2s;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  width: 300px; /* largura fixa para manter alinhamento */
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 100%; /* em telas pequenas, ocupa toda a largura */
+  }
+}
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
-  width: 255px;
-  height: 214px;
-  border-radius: 10% 10% 10% 10%;
-  margin-bottom: 15px;
-  padding: 5% 3% 0% 3%;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
-.card:hover {
-  box-shadow: 3px 10px 20px 10px #273e4e;
-}
-
-.card h2 {
+.card h3 {
+  margin-top: 0;
   font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-family: "Quicksand", sans-serif;
-  color: #323a63;
+  color: #333;
 }
 
 .card p {
-  font-size: 0.9rem;
-  color: #323a63;
-  text-align: center;
-  font-family: "Montserrat";
-  padding: 0% 5% 2% 5%;
-  font-weight: 500;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
 }
 
+/* separação */
 .cta-button {
   background-color: #384584;
   color: #dce4ea;
@@ -961,7 +1013,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
   }
- 
+
 }
 
 @media (max-width: 425px) and (min-width: 321px) {
@@ -1290,7 +1342,7 @@ body {
 
   .bannerin {
     font-size: 0.8rem !important;
-    padding: 0 10%  !important;
+    padding: 0 10% !important;
   }
 
   .oi {
