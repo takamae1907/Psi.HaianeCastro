@@ -1507,6 +1507,217 @@ body {
     line-height: 1.5;
   }
 }
+@media (max-width: 768px) and (min-width: 425px) {
+  .a-menu {
+    font-size: 1rem;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    align-items: center;
+  }
+
+  .logo {
+    width: 20%;
+    padding: 0 0 0 -20%;
+    margin: 0;
+  }
+
+  p.bannerin,
+  p.bannerin1 {
+    font-size: 1rem;
+    padding: 0 20%;
+    align-items: center;
+  }
+
+  .imgprinc {
+    align-items: center;
+    width: 50%;
+  }
+
+  h1.h1text {
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  p.principal {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .img1 {
+    visibility: hidden;
+  }
+
+  .tituloprincipal2,
+  .bannerin,
+  .cardimg,
+  .cardtext,
+  .h1text,
+  .principal,
+  .meublog,
+  .blo,
+  .baixoclass,
+  .servicos,
+  .centro,
+  .img1,
+  .image-section2 {
+    visibility: visible;
+  }
+
+  .tituloprincipal2 {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    padding: 0 20% !important;
+  }
+
+  .bannerin {
+    font-size: 0.8rem !important;
+    padding: 0 5% !important;
+  }
+
+  .oi {
+    max-width: 95% !important;
+    text-align: center !important;
+  }
+
+  .navbar ul {
+    padding: 0.5rem;
+    position: relative;
+    left: -70px;
+    top: 50%;
+  }
+
+  .navbar a {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .navbar a span {
+    font-size: 0.8rem;
+  }
+
+  h2.cardh {
+    font-size: 0.8rem !important;
+  }
+
+  p.cardtext {
+    font-size: 0.8rem !important;
+    padding: 0 0 5% 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 8% 8% 0 8%;
+    align-items: center;
+  }
+
+  .cardimg {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    object-fit: contain;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 13%;
+  }
+
+  .image-section2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgblog {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .text-section2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .text-section2 h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .text-section2 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    width: 90%;
+  }
+
+  .meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 13%;
+  }
+
+  .formulario {
+    order: -1;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .botão {
+    width: 90% !important;
+  }
+
+  .info {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    align-items: center;
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .formulario button {
+    width: 80%;
+    max-width: 400px;
+    padding: 5px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
 
 
 
