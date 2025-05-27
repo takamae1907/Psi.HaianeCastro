@@ -837,6 +837,7 @@ body {
   .baixoclass,
   .servicos,
   .centro,
+  .img1,
   .image-section2 {
     visibility: visible;
   }
@@ -885,7 +886,7 @@ body {
   }
 
   .card {
-    width: 50%;
+    width: 100%;
     padding: 8% 8% 0% 8%;
     align-items: center;
   }
@@ -1061,7 +1062,7 @@ body {
   }
 
   p.principal {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0%;
     margin: 0%;
     align-items: center;
@@ -1083,6 +1084,9 @@ body {
   .baixoclass,
   .servicos,
   .centro,
+  .imagem3,
+  .imagem,
+  .img1,
   .image-section2 {
     visibility: visible;
   }
@@ -1131,7 +1135,7 @@ body {
   }
 
   .card {
-    width: 50%;
+    width: 100%;
     padding: 8% 8% 0% 8%;
     align-items: center;
   }
