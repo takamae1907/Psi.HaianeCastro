@@ -23,3 +23,11 @@ if (window.innerWidth > 500) {
   sr.reveal('.centro', { duration: 1200, origin: 'top', distance: '20px' });
   sr.reveal('.image-section2', { duration: 1200, origin: 'top', distance: '20px' });
 }
+window.addEventListener('scroll', () => {
+  const menu = document.querySelector('.menu');
+  if (window.scrollY > 50) { // Ajuste o valor de 50 pixels conforme necessário
+    menu.classList.add('scrolled');
+  } else {
+    menu.classList.remove('scrolled');
+  }
+});
