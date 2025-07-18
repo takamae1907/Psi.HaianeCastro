@@ -1,0 +1,188 @@
+/* --- Configurações Globais e Variáveis --- */
+:root {
+    --primary-color: #0d6efd; /* Azul principal */
+    --body-bg-color: #eaf6ff; /* Novo fundo azul claro */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-color: #333;
+    --text-color-light: #fff;
+    --logo-color: #0056b3; /* Cor mais escura para a logo */
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 16px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--body-bg-color); /* Fundo azul aplicado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* Adicionado para conter o fundo de flores */
+    overflow: hidden; 
+    position: relative;
+}
+
+/* EFEITO DE SOMBRA DE FLORES NO FUNDO */
+.background-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Imagem de um padrão de flores sutil */
+    background-image: url('https://www.transparenttextures.com/patterns/floral.png');
+    opacity: 0.05; /* Muito sutil para não atrapalhar a leitura */
+    z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+}
+
+
+/* --- Container Principal --- */
+.container {
+    width: 100%;
+    max-width: 900px;
+    z-index: 1; /* Garante que o conteúdo fique na frente do fundo */
+}
+
+/* --- Cabeçalho --- */
+.header {
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+/* LOGO ATUALIZADA */
+/* LOGO ATUALIZADA */
+.header .logo {
+    display: flex;
+    align-items: center; /* Isso alinha a imagem e o texto verticalmente */
+    gap: 0.75rem; 
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--logo-color);
+}
+
+/* ▼▼▼ ESTILO PARA SUA IMAGEM DE LOGO ▼▼▼ */
+.logo-img {
+    height: 35px; /* Defina a altura desejada para sua logo */
+    width: auto;  /* A largura se ajusta automaticamente para não distorcer */
+}
+
+.header .logo i {
+    font-size: 1.5rem; /* Tamanho do ícone da logo */
+    color: var(--logo-color);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* --- Grid de Navegação --- */
+.navigation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* --- Estilo dos Cards --- */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 160px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.card span {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* --- Card Principal (Azul) --- */
+.card-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    grid-column: span 1;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.card-primary .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-primary .card-content i {
+    color: var(--text-color-light);
+}
+
+.card-primary .card-arrow {
+    align-self: flex-end;
+}
+
+.card-primary .card-arrow i {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card-primary:hover .card-arrow i {
+    transform: translateX(5px);
+}
+
+/* --- Responsividade para Celulares (sem alterações) --- */
+@media (max-width: 800px) {
+    .navigation-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-primary {
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .navigation-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .card {
+        min-height: auto;
+        padding: 1.2rem;
+    }
+    .card i {
+        font-size: 1.3rem;
+    }
+    .card span {
+        font-size: 1rem;
+    }
+}
