@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="icon" type="image/png" href="fotos/sua-logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <div class="login-page-container">
+        <div class="login-card">
+            <div class="logo">
+                <img src="MinhaArea/Fotos/logo02.png" alt="Logo">
+            </div>
+
+            <div class="avatar">
+                <span class="material-icons">vpn_key</span>
+            </div>
+            
+            <form id="redefinirSenhaForm">
+                <h2 style="margin-bottom: 1rem; font-weight: 600; color: #333;">Crie uma nova senha</h2>
+                <p style="margin-bottom: 1.5rem; color: #555; font-size: 0.9rem;">
+                    Sua nova senha deve ser forte e diferente das senhas anteriores.
+                </p>
+
+                <div class="input-group">
+                    <label for="novaSenha">Nova Senha</label>
+                    <input type="password" id="novaSenha" name="novaSenha" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmarNovaSenha">Confirme a Nova Senha</label>
+                    <input type="password" id="confirmarNovaSenha" name="confirmarNovaSenha" required>
+                </div>
+
+                <button type="submit" class="login-button">Salvar Nova Senha</button>
+            </form>
+            
+            <div class="extra-links" style="justify-content: center; margin-top: 2rem;">
+                <a href="login.html">Voltar para o Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="RedefinirSenha.js"></script>
+</body>
+</html>
