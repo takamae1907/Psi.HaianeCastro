@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Financeiro - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS dedicado para esta página -->
+    <link rel="stylesheet" href="Financeiro.css">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Logo" class="logo-img">
+                <span>Haiane Castro</span>
+            </div>
+            <h1>Gerenciar Financeiro</h1>
+        </header>
+
+        <div class="content-container">
+            <!-- Área de Seleção de Paciente -->
+            <div class="patient-selector-area">
+                <label for="patient-select">Selecione um Paciente:</label>
+                <select id="patient-select">
+                    <option value="">-- Escolha um paciente para ver os pagamentos --</option>
+                    <!-- Opções serão preenchidas via JS -->
+                </select>
+            </div>
+
+            <!-- Área de Exibição dos Pagamentos -->
+            <div id="payments-display-area" class="payments-display-area" style="display: none;">
+                <h3 id="payments-title">Pagamentos do Paciente</h3>
+                <div class="table-responsive">
+                    <table class="payments-table">
+                        <thead>
+                            <tr>
+                                <th>Sessão (Data)</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="payments-table-body">
+                            <!-- Linhas da tabela serão preenchidas via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             <a href="AreaPisicologa.html" class="action-button tertiary" style="margin-top: 2rem;">
+                <i class="fas fa-arrow-left"></i> Voltar ao Painel
+            </a>
+        </div>
+    </main>
+    
+    <!-- MODAL PARA VER O COMPROVANTE -->
+    <div id="receipt-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-modal-btn"><i class="fas fa-times"></i></button>
+            <h2>Comprovante de Pagamento</h2>
+            <img id="receipt-image" src="" alt="Comprovante de Pagamento">
+        </div>
+    </div>
+
+    <script src="Financeiro.js"></script>
+</body>
+</html>

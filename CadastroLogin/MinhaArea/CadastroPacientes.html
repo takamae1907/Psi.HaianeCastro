@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Paciente - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS dedicado para esta página -->
+    <link rel="stylesheet" href="CadastroPacientes.css">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Logo" class="logo-img">
+                <span>Haiane Castro</span>
+            </div>
+            <h1>Cadastrar Novo Paciente</h1>
+        </header>
+
+        <div class="content-container">
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #555;">
+                Preencha os campos abaixo para adicionar um novo paciente ao sistema.
+            </p>
+            
+            <form id="cadastroPacienteForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nomeCompleto">Nome Completo</label>
+                        <input type="text" id="nomeCompleto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input type="tel" id="telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="date" id="dataNascimento">
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="action-button primary">
+                        <i class="fas fa-user-plus"></i> Cadastrar Paciente
+                    </button>
+                    <a href="AreaPisicologa.html" class="action-button tertiary">
+                        <i class="fas fa-arrow-left"></i> Voltar ao Painel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <script src="CadastroPacientes.js"></script>
+</body>
+</html>

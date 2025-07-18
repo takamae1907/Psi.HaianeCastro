@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas Pendentes - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS dedicado para esta página -->
+    <link rel="stylesheet" href="Lembretes.css">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Logo" class="logo-img">
+                <span>Haiane Castro</span>
+            </div>
+            <h1>Lembretes e Tarefas</h1>
+        </header>
+
+        <div class="content-container">
+            <!-- Formulário para adicionar nova tarefa -->
+            <form id="task-form" class="task-input-form">
+                <input type="text" id="task-input" placeholder="Digite uma nova tarefa..." autocomplete="off">
+                <button type="submit" class="action-button primary">
+                    <i class="fas fa-plus"></i> Adicionar
+                </button>
+            </form>
+
+            <!-- Lista de Tarefas -->
+            <div class="task-list-container">
+                <h3>Minhas Tarefas</h3>
+                <ul id="task-list" class="task-list">
+                    <!-- Tarefas serão adicionadas aqui via JavaScript -->
+                    <li class="placeholder-task">Você ainda não tem tarefas.</li>
+                </ul>
+            </div>
+
+            <a href="AreaPisicologa.html" class="action-button tertiary" style="margin-top: 2rem;">
+                <i class="fas fa-arrow-left"></i> Voltar ao Painel
+            </a>
+        </div>
+    </main>
+    
+    <script src="Lembretes.js"></script>
+</body>
+</html>
