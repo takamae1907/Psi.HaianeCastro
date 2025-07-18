@@ -1,0 +1,145 @@
+/* --- Configurações Globais e Variáveis --- */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #00377e;
+    --body-bg-color: #eaf6ff; 
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-color: #333;
+    --text-color-light: #fff;
+    --logo-color: #0056b3; 
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 16px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- ESTILOS GERAIS --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden; 
+}
+
+.background-flowers {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/floral.png');
+    opacity: 0.05; 
+    z-index: -1; 
+}
+
+a { text-decoration: none; }
+
+/* --- ESTRUTURA PRINCIPAL DA PÁGINA --- */
+.container { width: 100%; max-width: 950px; z-index: 1; }
+.header { margin-bottom: 2rem; color: #444; }
+.header .logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 500; font-size: 1.1rem; color: var(--logo-color); }
+.logo-img { height: 35px; width: auto; }
+.header h1 { font-size: 2.5rem; font-weight: 600; margin-top: 0.5rem; }
+
+/* --- ESTILOS DA PÁGINA DE AGENDA DA DOUTORA --- */
+.content-container {
+    background-color: var(--card-bg);
+    padding: 2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.agenda-layout {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.calendario-container, .detalhes-dia-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.calendario-container h3, .detalhes-dia-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--logo-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para customizar o calendário Flatpickr */
+.flatpickr-calendar {
+    width: 100% !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd;
+}
+
+/* CÍRCULO AZUL EM VOLTA DO DIA COM AGENDAMENTO */
+.flatpickr-day.tem-agendamento {
+    border: 2px solid var(--primary-color);
+    background: rgba(13, 110, 253, 0.05);
+}
+.flatpickr-day.tem-agendamento:hover {
+    background: rgba(13, 110, 253, 0.15);
+}
+
+.flatpickr-day.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.flatpickr-day.selected.tem-agendamento {
+    background: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Lista de Agendamentos do Dia */
+.lista-agendamentos {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+.placeholder-text {
+    color: #777;
+    font-style: italic;
+    padding: 2rem 0;
+    text-align: center;
+}
+.agendamento-card-detalhe {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.horario-info, .paciente-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+}
+.horario-info i { color: var(--secondary-color); }
+.paciente-info { font-weight: 500; }
+
+/* Botão de Voltar */
+.action-button.tertiary {
+    display: inline-flex;
+    background-color: transparent;
+    color: #555;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.5rem;
+}
+.action-button.tertiary:hover { background-color: #e9ecef; }

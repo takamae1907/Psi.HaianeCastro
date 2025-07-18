@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Sessão - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="AgendamentoCliente.css">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Logo" class="logo-img">
+                <span>Haiane Castro</span>
+            </div>
+            <h1>Agendar Sessão</h1>
+        </header>
+
+        <div class="content-container">
+            <div class="agendamento-layout">
+                <div class="calendario-container">
+                    <h3>1. Selecione uma data</h3>
+                    <div id="calendario-agendamento"></div>
+                </div>
+
+                <div class="horarios-container">
+                    <h3 id="horarios-titulo">2. Escolha um horário</h3>
+                    <div id="horarios-grid" class="horarios-grid">
+                        <p class="horarios-placeholder">Selecione uma data no calendário para ver os horários disponíveis.</p>
+                    </div>
+                    <div class="confirmacao-container">
+                        <button id="confirmar-agendamento" class="action-button primary" disabled>
+                            Confirmar Agendamento
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="MinhaArea.html" class="action-button tertiary" style="margin-top: 2rem;">
+                <i class="fas fa-arrow-left"></i> Voltar ao Painel
+            </a>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="AgendamentoCliente.js"></script>
+</body>
+</html>

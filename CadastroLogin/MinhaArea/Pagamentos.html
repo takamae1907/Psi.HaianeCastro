@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pagamentos - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Apontando para o arquivo CSS dedicado desta página -->
+    <link rel="stylesheet" href="pagamentos.css">
+    <link rel="icon" type="image/png" href="fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <main class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="fotos/logo.png" alt="Logo" class="logo-img">
+                <!-- Nome corrigido -->
+                <span>Haiane Castro</span>
+            </div>
+            <h1>Meus Pagamentos</h1>
+        </header>
+
+        <div class="content-container">
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #555;">
+                Acompanhe o status das suas sessões e anexe os comprovantes de pagamento.
+            </p>
+
+            <div class="table-responsive">
+                <table class="payments-table">
+                    <thead>
+                        <tr>
+                            <th>Sessão (Data)</th>
+                            <th>Valor</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exemplo de pagamento PENDENTE -->
+                        <tr class="payment-row">
+                            <td>Sessão de 25/07/2025</td>
+                            <td>R$ 150,00</td>
+                            <td><span class="payment-status status-pendente">Pendente</span></td>
+                            <td class="action-cell">
+                                <button class="action-button primary small upload-btn">
+                                    <i class="fas fa-paperclip"></i> Anexar Comprovante
+                                </button>
+                                <!-- Campo de upload escondido -->
+                                <input type="file" class="file-input" style="display: none;">
+                            </td>
+                        </tr>
+                        <!-- Exemplo de pagamento PAGO -->
+                        <tr class="payment-row">
+                            <td>Sessão de 18/07/2025</td>
+                            <td>R$ 150,00</td>
+                            <td><span class="payment-status status-pago">Pago</span></td>
+                            <td class="action-cell">
+                                <button class="action-button tertiary small" disabled>
+                                    <i class="fas fa-check-circle"></i> Finalizado
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Exemplo de pagamento AGUARDANDO CONFIRMAÇÃO -->
+                         <tr class="payment-row">
+                            <td>Sessão de 11/07/2025</td>
+                            <td>R$ 150,00</td>
+                            <td><span class="payment-status status-aguardando">Aguardando Confirmação</span></td>
+                            <td class="action-cell">
+                                <button class="action-button secondary small" disabled>
+                                    <i class="fas fa-hourglass-half"></i> Enviado
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+             <a href="MinhaArea.html" class="action-button tertiary" style="margin-top: 2rem;">
+                <i class="fas fa-arrow-left"></i> Voltar ao Painel
+            </a>
+        </div>
+    </main>
+
+    <script src="pagamentos.js"></script>
+</body>
+</html>
