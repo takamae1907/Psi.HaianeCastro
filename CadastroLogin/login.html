@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Psi.HaianeCastro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="MinhaArea/Fotos/logo.png">
+</head>
+<body>
+    <div class="background-flowers"></div>
+
+    <div class="login-page-container">
+        <div class="login-card">
+            <div class="logo">
+                <img src="MinhaArea/Fotos/logo02.png" alt="Logo">
+            </div>
+
+            <div class="avatar">
+                <span class="material-icons">person</span>
+            </div>
+            
+            <form id="loginForm">
+                
+                <div class="profile-selector-group">
+                    <label class="group-label">Entrar como:</label>
+                    <div class="profile-options">
+                        <div class="profile-option">
+                            <input type="radio" id="perfilPaciente" name="perfil" value="paciente" checked>
+                            <label for="perfilPaciente">Paciente</label>
+                        </div>
+                        <div class="profile-option">
+                            <input type="radio" id="perfilPsicologa" name="perfil" value="psicologa">
+                            <label for="perfilPsicologa">Psicóloga</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar meu e-mail</label>
+                </div>
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+            
+            <div class="extra-links">
+                <a href="esqueceu-senha.html">Esqueceu a senha?</a>
+                <a href="cadastro.html">Fazer cadastro</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

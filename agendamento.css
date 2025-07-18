@@ -1,0 +1,289 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Fonte mais neutra */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo branco */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+header {
+    background-color: #ffffff;
+    padding: 15px 30px; /* Padding superior/inferior e lateral */
+    display: flex;
+    justify-content: center; /* **MUDANÇA AQUI: Centraliza os itens horizontalmente** */
+    align-items: center;
+    text-align: center;
+    padding: 5%  0%  0%  0% ;
+    gap: 50px; /* Adiciona espaçamento entre o logo e a navegação quando centralizados */
+    width: 100%;
+    max-width: 1200px; /* Define uma largura máxima para o conteúdo do header */
+    margin: 0 auto; /* Centraliza o header em si na tela */
+    box-sizing: border-box;
+}
+
+/* O restante do seu CSS permanece o mesmo */
+.logo-img { /*5 Estilo para a imagem do logo */
+    width: 30%;
+   
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666; /* Cor mais suave para os links */
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333; /* Cor mais escura no hover */
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 800px; /* Limita a largura do conteúdo principal */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px; /* Tamanho maior para o título */
+    color: #555; /* Cor cinza para o título */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.appointments-container {
+    background-color: #929ba5; /* Cor cinza azulada do container */
+    padding: 35px; /* Mais padding */
+    border-radius: 20px; /* Cantos mais arredondados */
+    width: 100%;
+    max-width: 550px; /* Largura mais específica para o container */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    position: relative;
+    overflow: hidden; /* Para garantir que o partial funcione bem */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre o título e a lista */
+    box-sizing: border-box;
+}
+
+/* Efeito de linhas diagonais sutis */
+.appointments-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+        rgba(255, 255, 255, 0.05) 25%, transparent 25%,
+        transparent 50%, rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.05) 75%, transparent 75%,
+        transparent);
+    background-size: 20px 20px; /* Ajuste o tamanho das linhas */
+    opacity: 0.15; /* Opacidade das linhas */
+    z-index: 0;
+}
+
+
+.appointments-container h2 {
+    font-size: 26px; /* Tamanho maior para o subtítulo */
+    color: #ffffff; /* Cor branca para o subtítulo */
+    margin-bottom: 15px; /* Ajuste do espaçamento */
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Garante que o texto fique acima do gradiente */
+}
+
+.appointment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaçamento menor entre os itens de agendamento */
+    position: relative;
+    z-index: 1; /* Garante que os itens fiquem acima do gradiente */
+    max-height: 400px; /* Altura máxima para a lista de agendamentos */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando o conteúdo excede a altura máxima */
+    padding-right: 5px; /* Pequeno padding para não sobrepor a barra de rolagem */
+}
+
+/* Esconder barra de rolagem no Webkit (Chrome, Safari) */
+.appointment-list::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+
+.appointment-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Cor do "polegar" da barra de rolagem */
+    border-radius: 4px;
+}
+
+.appointment-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.05); /* Cor da trilha da barra de rolagem */
+}
+
+
+.appointment-item {
+    /* Degradê no fundo do item */
+    background: linear-gradient(to right, #d1d9e0, #e0e7ee); /* Degradê suave de cinza claro para mais claro */
+    padding: 15px 20px;
+    border-radius: 10px; /* Cantos mais arredondados para os itens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    color: #555; /* Cor mais escura para o texto principal */
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil nos itens */
+}
+
+.appointment-item span:first-child {
+    color: #777; /* "Consulta" em cinza mais claro */
+}
+
+.appointment-item span:nth-child(2) {
+    color: #555; /* "Dia 26/11" em branco/cinza mais escuro */
+}
+
+.status {
+    padding: 6px 12px; /* Mais padding para o status */
+    border-radius: 8px; /* Cantos mais arredondados para o status */
+    font-weight: 700; /* Mais negrito */
+    font-size: 15px; /* Tamanho ligeiramente menor para o status */
+}
+
+.status.gray {
+    background-color: #aeb6be; /* Fundo cinza para o status "Pendente" */
+    color: #444; /* Texto em cinza escuro */
+}
+
+.status.green {
+    background-color: #4CAF50; /* Fundo verde para o status "Pendente" */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Estilo para o item parcialmente visível */
+.appointment-item.partial {
+    opacity: 0.6; /* Levemente mais transparente */
+    transform: translateY(-5px); /* Um pequeno deslocamento para cima */
+    margin-bottom: -5px; /* Ajusta o espaçamento para que pareça cortado */
+}
+
+/* Estilo para o novo botão "Passar para baixo" */
+.scroll-down-button {
+    background-color: #5a7791; /* Cor semelhante ao container */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px; /* Espaçamento acima do botão */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-down-button:hover {
+    background-color: #45617a;
+    transform: translateY(-2px); /* Pequeno efeito de elevação no hover */
+}
+
+.scroll-down-button .arrow-down {
+    font-size: 24px;
+    line-height: 1; /* Alinha a seta verticalmente */
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .appointments-container {
+        padding: 25px;
+    }
+
+    .appointments-container h2 {
+        font-size: 22px;
+    }
+
+    .appointment-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 12px 15px;
+    }
+
+    .appointment-item span:nth-child(2) {
+        margin-left: 0; /* Remove margem extra em telas pequenas */
+    }
+
+    .appointment-list {
+        max-height: 350px; /* Ajusta altura máxima para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 35px; /* Reduz o tamanho do logo em telas menores */
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .appointments-container h2 {
+        font-size: 18px;
+    }
+
+    .appointment-item {
+        font-size: 15px;
+    }
+
+    .status {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .scroll-down-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
